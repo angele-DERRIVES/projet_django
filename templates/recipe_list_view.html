@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Recipes list{% endblock %}
+
+{% block body_content %}
+    <h1>Recettes</h1>
+    <ul>
+    {% for object in object_list %}
+        <li>
+            <a href="{% url 'recipes_detail' object.id %}"></a>
+            {{ object }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Index &raquo; &raquo;</a>
+{% endblock %}
