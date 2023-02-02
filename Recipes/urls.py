@@ -28,6 +28,7 @@ from Genealogie.views.tag_detail_view import TagDetailView
 from Genealogie.views.tag_create_view import TagCreateView
 from Genealogie.views.tag_update_view import TagUpdateView
 from Genealogie.views.json.recipe_list import RecipeListJsonView
+from Accounts.Views.Register import register
 
 
 urlpatterns = [
@@ -44,6 +45,8 @@ urlpatterns = [
     path('tags/create', TagCreateView.as_view(), name='tag_create_view'),
     path('tags/update/<int:pk>', TagUpdateView.as_view(), name='tag_update'),
 
-    path('json/Recipes/List', RecipeListJsonView.as_view(), name='recipe_list_json'),
-    path('register', RegisterFormView.as_view(), name='register')
+    path('json/Recipes/List/', RecipeListJsonView.as_view(), name='recipe_list_json'),
+    path('register/', RegisterFormView.as_view(), name='register'),
+
+    path('register_form/', register, name="register")
 ]

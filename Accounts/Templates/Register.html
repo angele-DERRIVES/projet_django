@@ -1,0 +1,14 @@
+{% extends 'templates/base.html' %}
+{% block title %}Formulaire{% endblock %}
+
+{% block content %}
+    <div class="content-section">
+        <h1>Registration</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit"> Create new user></button>
+    </form>
+    </div>
+
+{% endblock %}
