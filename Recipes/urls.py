@@ -21,14 +21,13 @@ from Genealogie.views.recipe_detail_view import RecipeDetailView
 from Genealogie.views.recipe_list_view import RecipeListView
 from Genealogie.views.recipe_search_view import RecipeSearchView
 from Genealogie.views.recipe_search_by_ingredient_view import RecipeSearchByIngredientView
-from Genealogie.views.register_form import RegisterFormView
+from Registration.Views.register_form import RegisterFormView
 
 from Genealogie.views.tag_list_view import TagListView
 from Genealogie.views.tag_detail_view import TagDetailView
 from Genealogie.views.tag_create_view import TagCreateView
 from Genealogie.views.tag_update_view import TagUpdateView
 from Genealogie.views.json.recipe_list import RecipeListJsonView
-from Accounts.Views.Register import register
 
 
 urlpatterns = [
@@ -47,6 +46,4 @@ urlpatterns = [
 
     path('json/Recipes/List/', RecipeListJsonView.as_view(), name='recipe_list_json'),
     path('register/', RegisterFormView.as_view(), name='register'),
-
-    path('register_form/', register, name="register")
 ]

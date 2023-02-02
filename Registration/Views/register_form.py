@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.views import generic
 
-from Genealogie.forms.register import RegisterForm
+from Registration.Forms.register import RegisterForm
 
 
 class RegisterFormView(generic.FormView):
@@ -13,6 +13,7 @@ class RegisterFormView(generic.FormView):
         username = form.cleaned_data['username']
         email = form.cleaned_data['email']
         password = form.cleaned_data['password']
+        password2 = form.cleaned_data['password2']
 
         try:
             User.objects.create_user(
