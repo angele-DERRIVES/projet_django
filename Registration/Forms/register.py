@@ -8,6 +8,11 @@ class RegisterForm(forms.Form):
     password = forms.CharField(label="Password", widget=forms.PasswordInput())
     password2 = forms.CharField(label="Password confirmation", widget=forms.PasswordInput())
 
+    class Meta:
+        widgets={
+            'username' : forms.TextInput(attrs={'class':'form-control'})
+        }
+
     def clean(self):
         cleaned_data = super().clean()
         password = cleaned_data.get("password")
@@ -19,3 +24,4 @@ class RegisterForm(forms.Form):
         if self.cleaned_data['first_name'] == '':
             self.add_error('first_name', "First name can't be empty !")
         return self.cleaned_data['first_name']
+

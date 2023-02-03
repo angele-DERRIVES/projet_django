@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Genealogie.apps.RecipesConfig',
-    'Registration.apps.RegistrationConfig'
+    'Registration.apps.RegistrationConfig',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -127,6 +128,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #STATICFILES_DIRS = (os.path.join(BAS_DIR, "static"),)
 STATICFILES_DIRS = (BASE_DIR, "static",)
+
+#Formulaire style
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 '''
 LOGGING = {
