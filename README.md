@@ -3,7 +3,7 @@
 objectif : créer des quiz et les partager à ses amis à l'aide d'un lien 
 
 fonctionnalités : 
-- connexion / déconnnexion x
+- connexion / déconnexion x
 - obligé d'être cp pour créer des quiz
 - créer des quiz
 -> pour chaque quiz, une question et plusieurs réponses 
