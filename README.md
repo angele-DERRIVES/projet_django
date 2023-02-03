@@ -3,8 +3,8 @@
 objectif : créer des quiz et les partager à ses amis à l'aide d'un lien 
 
 fonctionnalités : 
-- connexion / déconnexion x
-- obligé d'être cp pour créer des quiz
+- connexion / déconnexion
+- obligé d'être co pour créer des quiz
 - créer des quiz
 -> pour chaque quiz, une question et plusieurs réponses 
 -> nbre de questions illimité
