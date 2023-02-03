@@ -3,16 +3,19 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,
+    minimum-scale=1.0"/>
     <title>{% block title %}{% endblock %}</title>
     <script src="{% static 'jquery-3.6.1.min.js' %}"></script>
 
     <link rel="stylesheet" href="{% static 'static/CSS/boostrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'static/CSS/style.css' %}">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Quizz</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,7 +38,7 @@
                 {% endif %}
                 {% if user.is_staff %}
                     <li class="nav-item"></li>
-                        <a class="nav-link active" aria-current="page" href="/admin">admin</a>
+                    <a class="nav-link active" aria-current="page" href="/admin">admin</a>
                     </li>
                 {% endif %}
             </ul>
@@ -51,8 +54,9 @@
     {% endfor %}
 {% endif %}
 
-{% block body_content %}
-{% endblock %}
-
+<div class='main'>
+    {% block body_content %}
+    {% endblock %}
+</div>
 </body>
 </html>
