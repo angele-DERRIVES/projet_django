@@ -5,7 +5,7 @@ from Genealogie.models.recipe import Recipe
 
 
 class RecipeSearchByIngredientView(ListView):
-    template_name = 'recipe_list_view.html'
+    template_name = 'Recipes/recipe_list_view.html'
 
     def get_queryset(self):
         search = self.kwargs['search']

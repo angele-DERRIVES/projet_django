@@ -4,7 +4,7 @@ from Genealogie.models.recipe import Recipe
 
 
 class RecipeSearchView(ListView):
-    template_name = 'recipe_list_view.html'
+    template_name = 'Recipes/recipe_list_view.html'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         result = super().get_context_data(object_list=object_list, **kwargs)

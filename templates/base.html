@@ -46,6 +46,13 @@
 {% endblock %}
 
 {% if messages %}
+    {% for message in messages %}
+        <p>test : {{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+<!--
+{% if messages %}
     <div id="modal-message" class="modal" tabindex="-1" role="dialog" style="display: none">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -70,6 +77,6 @@
         $('#modal-message').modal();
     })
     </script>
-{% endif %}
+{% endif %}-->
 </body>
 </html>

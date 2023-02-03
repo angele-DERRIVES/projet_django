@@ -4,5 +4,5 @@ from Genealogie.models.tag import Tag
 
 
 class TagDetailView(DetailView):
-    template_name = 'tag_detail_view.html'
+    template_name = 'Recipes/tag_detail_view.html'
     model = Tag

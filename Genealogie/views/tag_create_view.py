@@ -5,7 +5,7 @@ from Genealogie.models.tag import Tag
 
 
 class TagCreateView(CreateView):
-    template_name = 'tag_create_view.html'
+    template_name = 'Recipes/tag_create_view.html'
     model = Tag
     fields = ['text']
 

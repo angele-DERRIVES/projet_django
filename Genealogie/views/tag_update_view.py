@@ -5,7 +5,7 @@ from Genealogie.models.tag import Tag
 
 
 class TagUpdateView(UpdateView):
-    template_name = 'tag_update_view.html'
+    template_name = 'Recipes/tag_update_view.html'
     model = Tag
     fields = ['text']
 
