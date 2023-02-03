@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.auth.views import LogoutView
 from django.urls import path
 
 from Genealogie.views.index_view import IndexView
@@ -21,6 +22,7 @@ from Genealogie.views.recipe_detail_view import RecipeDetailView
 from Genealogie.views.recipe_list_view import RecipeListView
 from Genealogie.views.recipe_search_view import RecipeSearchView
 from Genealogie.views.recipe_search_by_ingredient_view import RecipeSearchByIngredientView
+from Registration.Views.login_view import UserLoginView
 from Registration.Views.register_form import RegisterFormView
 
 from Genealogie.views.tag_list_view import TagListView
@@ -46,4 +48,6 @@ urlpatterns = [
 
     path('json/Recipes/List/', RecipeListJsonView.as_view(), name='recipe_list_json'),
     path('register/', RegisterFormView.as_view(), name='register'),
+    path('login/', UserLoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(next_page='index'), name='logout')
 ]
