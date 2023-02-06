@@ -1,4 +1,4 @@
-from Genealogie.models import Module
+from Genealogie.models_file import Module
 from django.shortcuts import render, redirect, get_object_or_404
 
 from Genealogie.models.new_quiz_form import NewQuizForm
