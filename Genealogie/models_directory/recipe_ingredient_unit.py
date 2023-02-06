@@ -1,8 +1,8 @@
 from django.db import models
 
-from Genealogie.models.ingredient import Ingredient
-from Genealogie.models.recipe import Recipe
-from Genealogie.models.unit import Unit
+from Genealogie.models_directory.ingredient import Ingredient
+from Genealogie.models_directory.recipe import Recipe
+from Genealogie.models_directory.unit import Unit
 
 
 class RecipeIngredientUnit(models.Model):

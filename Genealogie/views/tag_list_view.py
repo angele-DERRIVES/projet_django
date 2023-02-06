@@ -1,6 +1,6 @@
 from django.views.generic import ListView
 
-from Genealogie.models.tag import Tag
+from Genealogie.models_directory.tag import Tag
 
 
 class TagListView(ListView):

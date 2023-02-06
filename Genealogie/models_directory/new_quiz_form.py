@@ -2,7 +2,7 @@ from django import forms
 from django.db import models
 from ckeditor.widgets import CKEditorWidget
 
-from Genealogie.models.quiz import Quiz
+from Genealogie.models_directory.quiz import Quiz
 
 
 class NewQuizForm(models.Model):

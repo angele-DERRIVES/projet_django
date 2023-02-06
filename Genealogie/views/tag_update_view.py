@@ -1,7 +1,7 @@
 from django.urls import reverse
 from django.views.generic import UpdateView
 
-from Genealogie.models.tag import Tag
+from Genealogie.models_directory.tag import Tag
 
 
 class TagUpdateView(UpdateView):

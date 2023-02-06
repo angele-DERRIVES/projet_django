@@ -1,10 +1,10 @@
 from django.contrib import admin
 
-from Genealogie.models.ingredient import Ingredient
-from Genealogie.models.recipe import Recipe
-from Genealogie.models.recipe_ingredient_unit import RecipeIngredientUnit
-from Genealogie.models.tag import Tag
-from Genealogie.models.unit import Unit
+from Genealogie.models_directory.ingredient import Ingredient
+from Genealogie.models_directory.recipe import Recipe
+from Genealogie.models_directory.recipe_ingredient_unit import RecipeIngredientUnit
+from Genealogie.models_directory.tag import Tag
+from Genealogie.models_directory.unit import Unit
 
 admin.site.register(Recipe)
 admin.site.register(Tag)

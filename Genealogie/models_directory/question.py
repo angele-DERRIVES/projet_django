@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-from Genealogie.models.answer import Answer
+from Genealogie.models_directory.answer import Answer
 
 
 class Question(models.Model):

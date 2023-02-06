@@ -1,6 +1,6 @@
 from django import forms
 
-from Genealogie.models.answer import Answer
+from Genealogie.models_directory.answer import Answer
 
 
 class NewAnswerForm(forms.ModelForm):
@@ -10,3 +10,5 @@ class NewAnswerForm(forms.ModelForm):
     class Meta:
         model = Answer
         fields = ('answer_text', 'is_correct')
+
+# SERT POSSIBLEMENT A RIEN

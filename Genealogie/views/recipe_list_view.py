@@ -1,6 +1,6 @@
 from django.views.generic import ListView
 
-from Genealogie.models.recipe import Recipe
+from Genealogie.models_directory.recipe import Recipe
 
 
 class RecipeListView(ListView):
