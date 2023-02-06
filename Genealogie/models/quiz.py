@@ -18,5 +18,3 @@ class Quiz(models.Model):
 
     def __str__(self):
         return self.title
-
-django.db.models_directory

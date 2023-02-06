@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.contrib.auth.views import LogoutView
 from django.urls import path
 
+from Genealogie.views import attempt_detail_view
 from Genealogie.views.index_view import IndexView
 from Genealogie.views.recipes_content.recipe_detail_view import RecipeDetailView
 from Genealogie.views.recipes_content.recipe_list_view import RecipeListView
@@ -50,4 +51,6 @@ urlpatterns = [
     path('register/', RegisterFormView.as_view(), name='register'),
     path('login/', UserLoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page='index'), name='logout'),
+
+    #path('attemptDetail/', attempt_detail_view.as_view(), name='attempt_detail')
 ]
