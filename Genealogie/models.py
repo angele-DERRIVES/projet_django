@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-from Genealogie.models_directory.quiz import Quiz
+from Genealogie.models.quiz import Quiz
 
 
 class Module(models.Model):

@@ -1,6 +1,6 @@
 from django.views.generic import DetailView
 
-from Genealogie.models_directory.recipes_content.recipe import Recipe
+from Genealogie.models.recipes_content.recipe import Recipe
 
 
 class RecipeDetailView(DetailView):

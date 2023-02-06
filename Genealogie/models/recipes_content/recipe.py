@@ -1,6 +1,6 @@
 from django.db import models
 
-from Genealogie.models_directory.recipes_content.tag import Tag
+from Genealogie.models.recipes_content.tag import Tag
 
 
 class Recipe(models.Model):

@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 
-from Genealogie.models_directory.answer import Answer
-from Genealogie.models_directory.new_question_form import NewQuestionForm
-from Genealogie.models_directory.question import Question
-from Genealogie.models_directory.quiz import Quiz
+from Genealogie.models.answer import Answer
+from Genealogie.models.new_question_form import NewQuestionForm
+from Genealogie.models.question import Question
+from Genealogie.models.quiz import Quiz
 
 
 def NewQUestion(request, quiz_id):

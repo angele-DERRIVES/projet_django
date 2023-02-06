@@ -1,7 +1,7 @@
 from django.urls import reverse
 from django.views.generic import CreateView
 
-from Genealogie.models_directory.recipes_content.tag import Tag
+from Genealogie.models.recipes_content.tag import Tag
 
 
 class TagCreateView(CreateView):

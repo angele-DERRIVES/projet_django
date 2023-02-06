@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 
-from Genealogie.models_directory.quiz import Quiz
+from Genealogie.models.quiz import Quiz
 
 
 def TakeQuiz(request, quiz_id):

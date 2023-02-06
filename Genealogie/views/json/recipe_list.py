@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.views import View
 
-from Genealogie.models_directory.recipes_content.recipe import Recipe
+from Genealogie.models.recipes_content.recipe import Recipe
 
 
 class RecipeListJsonView(View):

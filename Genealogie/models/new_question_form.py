@@ -1,6 +1,6 @@
 from django import forms
 
-from Genealogie.models_directory.question import Question
+from Genealogie.models.question import Question
 
 
 class NewQuestionForm(forms.ModelForm):

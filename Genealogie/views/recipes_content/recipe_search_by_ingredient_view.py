@@ -1,7 +1,7 @@
 from django.db.models import Q
 from django.views.generic import ListView
 
-from Genealogie.models_directory.recipes_content.recipe import Recipe
+from Genealogie.models.recipes_content.recipe import Recipe
 
 
 class RecipeSearchByIngredientView(ListView):

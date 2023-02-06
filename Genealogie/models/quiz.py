@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 from ckeditor.fields import RichTextField
 
-from Genealogie.models_directory.question import Question
+from Genealogie.models.question import Question
 
 
 class Quiz(models.Model):
@@ -18,3 +18,5 @@ class Quiz(models.Model):
 
     def __str__(self):
         return self.title
+
+django.db.models_directory

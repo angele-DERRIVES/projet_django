@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 
-from Genealogie.models_directory.answer import Answer
-from Genealogie.models_directory.attempt import Attempt
-from Genealogie.models_directory.player import Player
-from Genealogie.models_directory.question import Question
-from Genealogie.models_directory.quiz import Quiz
+from Genealogie.models.answer import Answer
+from Genealogie.models.attempt import Attempt
+from Genealogie.models.player import Player
+from Genealogie.models.question import Question
+from Genealogie.models.quiz import Quiz
 
 
 def SubmitAttempt(request, quiz_id):

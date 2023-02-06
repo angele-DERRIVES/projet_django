@@ -1,10 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-from Genealogie.models_directory.answer import Answer
-from Genealogie.models_directory.player import Player
-from Genealogie.models_directory.question import Question
-from Genealogie.models_directory.quiz import Quiz
+from Genealogie.models.answer import Answer
+from Genealogie.models.player import Player
+from Genealogie.models.question import Question
+from Genealogie.models.quiz import Quiz
 
 
 class Attempt(models.Model):

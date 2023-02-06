@@ -1,8 +1,8 @@
 from Genealogie.models import Module
 from django.shortcuts import render, redirect, get_object_or_404
 
-from Genealogie.models_directory.new_quiz_form import NewQuizForm
-from Genealogie.models_directory.quiz import Quiz
+from Genealogie.models.new_quiz_form import NewQuizForm
+from Genealogie.models.quiz import Quiz
 
 
 def NewQuiz(request, module_id):

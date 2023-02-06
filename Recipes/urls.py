@@ -23,7 +23,7 @@ from Genealogie.views.recipes_content.recipe_list_view import RecipeListView
 from Genealogie.views.recipes_content.recipe_search_view import RecipeSearchView
 from Genealogie.views.recipes_content.recipe_search_by_ingredient_view import RecipeSearchByIngredientView
 from Registration.Views.login_view import UserLoginView
-from Registration.Views.register_form import RegisterFormView
+from Registration.Views.register_form_view import RegisterFormView
 
 from Genealogie.views.recipes_content.tag_list_view import TagListView
 from Genealogie.views.recipes_content.tag_detail_view import TagDetailView
