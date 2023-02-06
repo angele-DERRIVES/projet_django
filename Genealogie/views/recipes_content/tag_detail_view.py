@@ -1,6 +1,6 @@
 from django.views.generic import DetailView
 
-from Genealogie.models_directory.tag import Tag
+from Genealogie.models_directory.recipes_content.tag import Tag
 
 
 class TagDetailView(DetailView):
