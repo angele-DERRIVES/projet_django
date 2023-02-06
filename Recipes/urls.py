@@ -49,5 +49,5 @@ urlpatterns = [
     path('json/Recipes/List/', RecipeListJsonView.as_view(), name='recipe_list_json'),
     path('register/', RegisterFormView.as_view(), name='register'),
     path('login/', UserLoginView.as_view(), name='login'),
-    path('logout/', LogoutView.as_view(next_page='index'), name='logout')
+    path('logout/', LogoutView.as_view(next_page='index'), name='logout'),
 ]
