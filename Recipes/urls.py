@@ -31,6 +31,7 @@ from Genealogie.views.recipes_content.tag_detail_view import TagDetailView
 from Genealogie.views.recipes_content.tag_create_view import TagCreateView
 from Genealogie.views.recipes_content.tag_update_view import TagUpdateView
 from Genealogie.views.json.recipe_list import RecipeListJsonView
+from Genealogie.views.attempt_detail_view import AttemptDetail
 
 
 urlpatterns = [
@@ -52,5 +53,6 @@ urlpatterns = [
     path('login/', UserLoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page='index'), name='logout'),
 
-    #path('attemptDetail/', attempt_detail_view.as_view(), name='attempt_detail')
+    path('quiz/', AttemptDetail, name='attempt_detail')
+    #path('attemptDetail/', attempt_detail_view, name='attempt_detail')
 ]
