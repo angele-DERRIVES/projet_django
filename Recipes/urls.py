@@ -18,17 +18,17 @@ from django.contrib.auth.views import LogoutView
 from django.urls import path
 
 from Genealogie.views.index_view import IndexView
-from Genealogie.views.recipe_detail_view import RecipeDetailView
-from Genealogie.views.recipe_list_view import RecipeListView
-from Genealogie.views.recipe_search_view import RecipeSearchView
-from Genealogie.views.recipe_search_by_ingredient_view import RecipeSearchByIngredientView
+from Genealogie.views.recipes_content.recipe_detail_view import RecipeDetailView
+from Genealogie.views.recipes_content.recipe_list_view import RecipeListView
+from Genealogie.views.recipes_content.recipe_search_view import RecipeSearchView
+from Genealogie.views.recipes_content.recipe_search_by_ingredient_view import RecipeSearchByIngredientView
 from Registration.Views.login_view import UserLoginView
 from Registration.Views.register_form import RegisterFormView
 
-from Genealogie.views.tag_list_view import TagListView
-from Genealogie.views.tag_detail_view import TagDetailView
-from Genealogie.views.tag_create_view import TagCreateView
-from Genealogie.views.tag_update_view import TagUpdateView
+from Genealogie.views.recipes_content.tag_list_view import TagListView
+from Genealogie.views.recipes_content.tag_detail_view import TagDetailView
+from Genealogie.views.recipes_content.tag_create_view import TagCreateView
+from Genealogie.views.recipes_content.tag_update_view import TagUpdateView
 from Genealogie.views.json.recipe_list import RecipeListJsonView
 
 
