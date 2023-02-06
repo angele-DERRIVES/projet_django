@@ -1,7 +1,5 @@
 from Genealogie.models import Module
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseForbidden
 
 from Genealogie.models_directory.new_quiz_form import NewQuizForm
 from Genealogie.models_directory.quiz import Quiz
