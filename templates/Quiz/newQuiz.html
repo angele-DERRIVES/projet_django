@@ -6,10 +6,28 @@
 
 {% block body_content %}
     <h1>Create Quiz</h1>
+
+    {{ form.title }}
+    <label for="title">Title</label>
+
+    {{ form.description }}
+    <label for="description">Description</label>
+
+    {{ form.due }}
+    <label for="due">Due</label>
+
+    {{ form.allowed_attempts }}
+    <label for="allowed_attempts">Allowed Attempts</label>
+
+    {{ form.time_limit_mins }}
+    <label for="time_limit_mins">Time limit in minutes</label>
+
+    <button type="submit" value="login">Create new QUiz</button>
+
+    <!--
     <form action="" method="post">
         {% csrf_token %}
         {{ form|crispy }}
         <button type="submit" class="btn btn-primary">Submit</button>
-
-    </form>
+    </form>-->
 {% endblock %}
