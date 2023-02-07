@@ -39,7 +39,6 @@ from Kouiz.views.quiz_detail_view import QuizDetail
 from Kouiz.views.submit_attempt_view import SubmitAttempt
 from Kouiz.views.take_quiz_view import TakeQuiz
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
@@ -59,10 +58,10 @@ urlpatterns = [
     path('login/', UserLoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page='index'), name='logout'),
 
-    path('quiz/<int:module_id>/', AttemptDetail, name='attempt_detail'),
-    path('quiz/<int:module_id>/', NewQuestion, name='new_question'),
-    path('quiz/<int:module_id>/', NewQuiz, name='new_quiz'),
-    path('quiz/<int:module_id>/', QuizDetail, name='quiz_detail'),
-    path('quiz/<int:module_id>/', SubmitAttempt, name='submit_attempt'),
-    path('quiz/<int:module_id>/', TakeQuiz, name='take_quiz'),
+    path('quiz/<int:quiz_id>/<int:attempt_id>/results', AttemptDetail, name='attempt_detail'),
+    path('quiz/<int:quiz_id>/<new_question>/', NewQuestion, name='new_question'),
+    # path('CreateQuiz/<int:module_id>/', NewQuiz, name='new_quiz'),
+    path('quiz/<int:quiz_id>/', QuizDetail, name='quiz_detail'),
+    path('quiz/<int:quiz_id>/take/submit', SubmitAttempt, name='submit_attempt'),
+    path('quiz/<quiz_id>/take', TakeQuiz, name='take_quiz'),
 ]
