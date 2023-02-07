@@ -5,7 +5,8 @@ from ckeditor.widgets import CKEditorWidget
 from Genealogie.models.quiz import Quiz
 
 
-class NewQuizForm(models.Model):
+#class NewQuizForm(models.Model):
+class NewQuizForm(forms.Form):
     title = forms.CharField(widget=forms.TextInput(attrs={'class': 'validate'}), required=True)
     description = forms.CharField(widget=CKEditorWidget())
     due = forms.DateField(widget=forms.TextInput(attrs={'class': 'datepicker'}), required=True)
