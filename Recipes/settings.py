@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Genealogie.apps.RecipesConfig',
+    'Kouiz.apps.RecipesConfig',
     'Registration.apps.RegistrationConfig',
     'crispy_forms'
 ]

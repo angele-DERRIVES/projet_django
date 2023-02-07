@@ -17,27 +17,27 @@ from django.contrib import admin
 from django.contrib.auth.views import LogoutView
 from django.urls import path
 
-from Genealogie.views import attempt_detail_view
-from Genealogie.views.index_view import IndexView
-from Genealogie.views.recipes_content.recipe_detail_view import RecipeDetailView
-from Genealogie.views.recipes_content.recipe_list_view import RecipeListView
-from Genealogie.views.recipes_content.recipe_search_view import RecipeSearchView
-from Genealogie.views.recipes_content.recipe_search_by_ingredient_view import RecipeSearchByIngredientView
+from Kouiz.views import attempt_detail_view
+from Kouiz.views.index_view import IndexView
+from Kouiz.views.recipes_content.recipe_detail_view import RecipeDetailView
+from Kouiz.views.recipes_content.recipe_list_view import RecipeListView
+from Kouiz.views.recipes_content.recipe_search_view import RecipeSearchView
+from Kouiz.views.recipes_content.recipe_search_by_ingredient_view import RecipeSearchByIngredientView
 from Registration.Views.login_view import UserLoginView
 from Registration.Views.register_form_view import RegisterFormView
 
-from Genealogie.views.recipes_content.tag_list_view import TagListView
-from Genealogie.views.recipes_content.tag_detail_view import TagDetailView
-from Genealogie.views.recipes_content.tag_create_view import TagCreateView
-from Genealogie.views.recipes_content.tag_update_view import TagUpdateView
-from Genealogie.views.json.recipe_list import RecipeListJsonView
+from Kouiz.views.recipes_content.tag_list_view import TagListView
+from Kouiz.views.recipes_content.tag_detail_view import TagDetailView
+from Kouiz.views.recipes_content.tag_create_view import TagCreateView
+from Kouiz.views.recipes_content.tag_update_view import TagUpdateView
+from Kouiz.views.json.recipe_list import RecipeListJsonView
 
-from Genealogie.views.attempt_detail_view import AttemptDetail
-from Genealogie.views.new_quiz_view import NewQuiz
-from Genealogie.views.new_question_view import NewQuestion
-from Genealogie.views.quiz_detail_view import QuizDetail
-from Genealogie.views.submit_attempt_view import SubmitAttempt
-from Genealogie.views.take_quiz_view import TakeQuiz
+from Kouiz.views.attempt_detail_view import AttemptDetail
+from Kouiz.views.new_quiz_view import NewQuiz
+from Kouiz.views.new_question_view import NewQuestion
+from Kouiz.views.quiz_detail_view import QuizDetail
+from Kouiz.views.submit_attempt_view import SubmitAttempt
+from Kouiz.views.take_quiz_view import TakeQuiz
 
 
 urlpatterns = [
