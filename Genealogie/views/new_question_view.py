@@ -6,7 +6,7 @@ from Genealogie.models.question import Question
 from Genealogie.models.quiz import Quiz
 
 
-def NewQUestion(request, quiz_id):
+def NewQuestion(request, quiz_id):
     user = request.user
     quiz = get_object_or_404(Quiz, id=quiz_id)
 

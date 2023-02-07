@@ -34,6 +34,10 @@ from Genealogie.views.json.recipe_list import RecipeListJsonView
 
 from Genealogie.views.attempt_detail_view import AttemptDetail
 from Genealogie.views.new_quiz_view import NewQuiz
+from Genealogie.views.new_question_view import NewQuestion
+from Genealogie.views.quiz_detail_view import QuizDetail
+from Genealogie.views.submit_attempt_view import SubmitAttempt
+from Genealogie.views.take_quiz_view import TakeQuiz
 
 
 urlpatterns = [
@@ -55,5 +59,10 @@ urlpatterns = [
     path('login/', UserLoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page='index'), name='logout'),
 
-    path('quiz/<int:module_id>/', NewQuiz, name='new_quiz')
+    path('quiz/<int:module_id>/', AttemptDetail, name='attempt_detail'),
+    path('quiz/<int:module_id>/', NewQuestion, name='new_question'),
+    path('quiz/<int:module_id>/', NewQuiz, name='new_quiz'),
+    path('quiz/<int:module_id>/', QuizDetail, name='quiz_detail'),
+    path('quiz/<int:module_id>/', SubmitAttempt, name='submit_attempt'),
+    path('quiz/<int:module_id>/', TakeQuiz, name='take_quiz'),
 ]
