@@ -11,6 +11,7 @@ class NewQuiz(CreateView):
     form_class = NewQuizForm
 
     def get_success_url(self):
-        return reverse('index')
+        question_name = 'new_question'
+        return reverse('new_question', args=[self.object.id])
 
         #return redirect('new_question', quiz_id=quiz.id)
