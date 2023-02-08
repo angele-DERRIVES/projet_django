@@ -7,10 +7,8 @@ from Kouiz.models.quiz import Quiz
 def QuizDetail(request, quiz_id):
     user = request.user
     quiz = get_object_or_404(Quiz, id=quiz_id)
-    my_attempts = Player.objects.filter(quiz=quiz, user=user)
 
     context = {
-        'quiz': quiz,
-        'my_attempts': my_attempts
+        'quiz': quiz
     }
     return render(request, 'Quiz/quizDetail.html', context)

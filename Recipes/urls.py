@@ -19,6 +19,7 @@ from django.urls import path
 
 from Kouiz.views import attempt_detail_view
 from Kouiz.views.index_view import IndexView
+from Kouiz.views.new_quiz_view import NewQuiz
 from Kouiz.views.recipes_content.recipe_detail_view import RecipeDetailView
 from Kouiz.views.recipes_content.recipe_list_view import RecipeListView
 from Kouiz.views.recipes_content.recipe_search_view import RecipeSearchView
@@ -33,7 +34,6 @@ from Kouiz.views.recipes_content.tag_update_view import TagUpdateView
 from Kouiz.views.json.recipe_list import RecipeListJsonView
 
 from Kouiz.views.attempt_detail_view import AttemptDetail
-from Kouiz.views.new_quiz_view import NewQuiz
 from Kouiz.views.new_question_view import NewQuestion
 from Kouiz.views.quiz_detail_view import QuizDetail
 from Kouiz.views.submit_attempt_view import SubmitAttempt
@@ -60,7 +60,7 @@ urlpatterns = [
 
     path('quiz/<int:quiz_id>/<int:attempt_id>/results', AttemptDetail, name='attempt_detail'),
     path('quiz/<int:quiz_id>/<new_question>/', NewQuestion, name='new_question'),
-    path('quiz/new_quiz/', NewQuiz, name='new_quiz'),
+    path('quiz/new_quiz/', NewQuiz.as_view(), name='new_quiz'),
     path('quiz/<int:quiz_id>/', QuizDetail, name='quiz_detail'),
     path('quiz/<int:quiz_id>/take/submit', SubmitAttempt, name='submit_attempt'),
     path('quiz/<quiz_id>/take', TakeQuiz, name='take_quiz'),

@@ -1,34 +1,30 @@
-from Kouiz.models_file import Module
-from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
+from django.views.generic import CreateView
 
-from Kouiz.models.new_quiz_form import NewQuizForm
+from Kouiz.forms.new_quiz_form import NewQuizForm
 from Kouiz.models.quiz import Quiz
 
 
-def NewQuiz(request, module_id):
-    user = request.user
-    module = get_object_or_404(Module, id=module_id)
+class NewQuiz(CreateView):
+    model = Quiz
+    template_name = "Quiz/newQuiz.html"
+    form_class = NewQuizForm
 
-    if request.method == 'POST':
-        form = NewQuizForm(request.POST)
+    def form_valid(self, form):
+        title = form.cleaned_data.get('title')
+        description = form.cleaned_data.get('description')
 
-        if form.is_valid():
-            title = form.cleaned_data.get('title')
-            description = form.cleaned_data.get('title')
-            due = form.cleaned_data.get('due')
-            allowed_attempts = form.cleaned_data.get('allowed_attempts')
-            time_limit_mins = form.cleaned_data.get('time_limit_mins')
-            quiz = Quiz.objects.create(title=title, description=description, due=due,
-                                       allowed_attempts=allowed_attempts, time_limit_mins=time_limit_mins)
-            module.quizzes.add(quiz)
-            module.save()
+        form.instance.user = self.request.user
 
-            return redirect('new-question', quiz_id=quiz.id)
+        quiz = Quiz.objects.create(title=title, description=description)
+        # module.quizzes.add(quiz)
+        # module.save()
 
-    else:
-        form = NewQuizForm()
+        return super().form_valid(form)
 
-    context = {
-        'form': form
-    }
-    return render(request, 'Quiz/newQuiz.html', context)
+    def get_success_url(self):
+        reverse('home')
+
+        #return redirect('new_question', quiz_id=quiz.id)
+
+

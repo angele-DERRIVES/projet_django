@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 
 from Kouiz.models.answer import Answer
-from Kouiz.models.new_question_form import NewQuestionForm
+from Kouiz.forms.new_question_form import NewQuestionForm
 from Kouiz.models.question import Question
 from Kouiz.models.quiz import Quiz
 
