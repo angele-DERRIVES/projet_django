@@ -6,9 +6,48 @@
 
 {% block body_content %}
     <h1>Login</h1>
+
+    <h5>Due:</h5>
+    <p>{{ quiz.due }}</p>
+
+    <h5>Allowed attempts:</h5>
+    <p>{{ quiz.allowed_attempts }}</p>
+
+    <h5>Time limit:</h5>
+    <p>{{ quiz.time_limit_mins }}</p>
+
+    {{ quiz.dscription | safe }}
+
+    <form method="POST">
+        {% csrf_token %}
+        {% for question in quiz.questions.all %}
+            <br>
+            <p>{{ question.question_txt }}</p>
+            <input type="hidden" name="question" value="{{ question.id }}">
+            {% for answer in question.answers.all %}
+                <label>
+                    <input name="answers" type="checkbox" value="{{ answer.id }}"
+                            {%  if answer.is_correct == True %}
+                           checked="checked"
+                            {% endif %}
+                    />
+                    <span>{{ answer.answer_text }}</span>
+                </label>
+            {% endfor %}
+        {% endfor %}
+    </form>
+
+    <h5>Yous answers</h5>
+    {% for attempt in attempts %}
+        <h5 class="{% if attempt.answer.is_correct == True %}green{% else %}red{% endif %}-text">
+            {{ attempt.answer.answer_text }}
+        </h5>
+    {% endfor %}
+
+    <!--
     <form action="" method="post">
         {% csrf_token %}
         {{ form|crispy }}
         <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </form>-->
 {% endblock %}
