@@ -7,33 +7,10 @@
 {% block body_content %}
     <h1>Create Question</h1>
 
-    {{ form.question_text }}
-    <label for="question_text">Question</label>
-
-    {{ form.points }}
-    <label for="points">points</label>
-
-    <input type="text" name="answer_text" id="id_answer_text">
-    <label for="answer_text"></label>Answer</label>
-
-    <input type="text" name="answer_text" id="id_answer_text" class="validate">
-    <label for="answer_text">Answer</label>
-
-    <select id="id_is_correct" name="is_correct">
-        <option value="" disabled selected>Choose your answer</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-    </select>
-
-    <button type="submit" value="login">Create new question</button>
-
-    <!--
-    <form action="" method="post">
+    <form method="post">
         {% csrf_token %}
         {{ form|crispy }}
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Create new quiz</button>
+    </form>
 
-    </form>-->
 {% endblock %}
