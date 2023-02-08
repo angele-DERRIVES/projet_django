@@ -6,7 +6,20 @@
 
 {% block body_content %}
     <h1>Quiz Detail</h1>
-    <form action="" method="post">
 
+    <h5>Due:</h5>
+    <p>{{ quiz.due }}</p>
+
+    <h5>Allowed attempts:</h5>
+    <p>{{ quiz.allowed-attempts }}</p>
+
+    <h5>Time limit:</h5>
+    <p>{{ quiz.time_limit_mins }}</p>
+
+    {{ quiz.dscription | safe }}
+
+    <!--
+    <form action="" method="post">
     </form>
+    -->
 {% endblock %}
