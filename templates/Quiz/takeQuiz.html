@@ -6,10 +6,41 @@
 
 {% block body_content %}
     <h1>Take Quiz</h1>
+
+    <h5>Due:</h5>
+    <p>{{ quiz.due }}</p>
+
+    <h5>Allowed attempts:</h5>
+    <p>{{ quiz.allowed-attempts }}</p>
+
+    <h5>Time limit:</h5>
+    <p>{{ quiz.time_limit_mins }}</p>
+
+    {{ quiz.dscription | safe }}
+
+    <form method="POST" action="{% url 'submit_quiz' quiz.id %}"role="form">
+        {% csrf_token %}
+        {% for question in quiz.questions.all %}
+            <br>
+            <p>{{ question.question_txt }}</p>
+            <input type="hidden" name="question" value="{{ question.id }}">
+            {% for answer in question.answers.all %}
+                <label>
+                    <input name="answers" type="checkbox" value="{{ answer.id }}"/>
+                    <span>{{ answer.answer_text }}</span>
+                </label>
+            {% endfor %}
+        {% endfor %}
+        <button type="submit" value="login">
+            Submit
+        </button>
+    </form>
+
+    <!--
     <form action="" method="post">
         {% csrf_token %}
         {{ form|crispy }}
         <button type="submit" class="btn btn-primary">Submit</button>
 
-    </form>
+    </form>-->
 {% endblock %}
