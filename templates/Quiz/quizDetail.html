@@ -1,25 +1,11 @@
 {% extends 'base.html' %}
 {% load crispy_forms_filters %}
-{% block title %}Login{% endblock %}
+{% block title %}Quiz Detail{% endblock %}
 {% load static %}
 {%  load crispy_forms_tags %}
 
 {% block body_content %}
     <h1>Quiz Detail</h1>
 
-    <h5>Due:</h5>
-    <p>{{ quiz.due }}</p>
-
-    <h5>Allowed attempts:</h5>
-    <p>{{ quiz.allowed-attempts }}</p>
-
-    <h5>Time limit:</h5>
-    <p>{{ quiz.time_limit_mins }}</p>
-
-    {{ quiz.dscription | safe }}
-
-    <!--
-    <form action="" method="post">
-    </form>
-    -->
+    {{ quiz.description|safe }}
 {% endblock %}

@@ -27,7 +27,8 @@ def NewQuestion(request, quiz_id):
                 question.save()
                 quiz.questions.add(question)
                 quiz.save()
-            return redirect('new_answer', quiz_id=quiz.id)
+            return redirect('quiz_detail', quiz_id=quiz.id)
+
     else:
         form = NewQuestionForm()
 
