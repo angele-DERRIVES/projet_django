@@ -21,10 +21,6 @@ def NewQuestion(request, quiz_id):
 
             question = Question.objects.create(question_text=question_text, user=user, points=points)
 
-            # for a, c in zip(answer_text, is_correct):
-                # answer = Answer.object.create(answer_text=a, is_correct=c, user=user)
-                # question.answers.add(answer)
-                # question.save()
             quiz.questions.add(question)
             quiz.save()
 

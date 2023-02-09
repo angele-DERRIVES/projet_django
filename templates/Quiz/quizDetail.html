@@ -10,7 +10,9 @@
     <h2>{{ quiz.title|safe }}</h2>
     <p>{{ quiz.description|safe }}</p>
 
-    <a href="{% url 'new_question' quiz_id %}">Create New question</a>
+    {% if quiz.user == request.user %}
+        <a href="{% url 'new_question' quiz_id %}">Create New question</a>
+    {% endif %}
 
     {% if questions %}
         <ul class="list-group">
