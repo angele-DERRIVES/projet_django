@@ -38,6 +38,7 @@ from Kouiz.views.new_question_view import NewQuestion
 from Kouiz.views.quiz_detail_view import QuizDetail
 from Kouiz.views.submit_attempt_view import SubmitAttempt
 from Kouiz.views.take_quiz_view import TakeQuiz
+from Kouiz.views.my_quiz_view import MyQuizView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -66,5 +67,5 @@ urlpatterns = [
     path('quiz/<int:quiz_id>/take/submit', SubmitAttempt, name='submit_attempt'),
     path('quiz/<quiz_id>/take', TakeQuiz, name='take_quiz'),
     path('quiz/list/', QuizListView.as_view(), name='quiz_list'),
-    path('quiz/my_quizzes/', MyQuizView.as_view(), name='quiz_list'),
+    path('quiz/my_quizzes/', MyQuizView.as_view(), name='my_quizzes'),
 ]

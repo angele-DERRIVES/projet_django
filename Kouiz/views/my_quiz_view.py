@@ -8,4 +8,4 @@ class MyQuizView(ListView):
     model = Quiz
 
     def get_queryset(self):
-        return Quiz.objects.filter(created_by=self.request.user)
+        return Quiz.objects.filter(user=self.request.user)
