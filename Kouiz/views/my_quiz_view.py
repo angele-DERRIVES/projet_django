@@ -8,4 +8,6 @@ class MyQuizView(ListView):
     model = Quiz
 
     def get_queryset(self):
-        return Quiz.objects.filter(user=self.request.user)
+        if self.request.user.is_authenticated:
+            return Quiz.objects.filter(user=self.request.user)
+        return Quiz.objects.none()

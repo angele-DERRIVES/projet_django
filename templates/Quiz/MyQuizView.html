@@ -7,8 +7,12 @@
 {% block body_content %}
     <h1>Your Quizzes</h1>
 
-    {% if quiz.user == request.user %}
-        <a href="{% url 'quiz_detail' quiz_id %}">{{ Quiz.title }}</a>
-    {% endif %}
+    <ul>
+        {% for object in object_list %}
+            <li>
+                <a href="{% url 'quiz_detail' object.id %}">{{ object }}</a>
+            </li>
+        {% endfor %}
+    </ul>
 
 {% endblock %}
