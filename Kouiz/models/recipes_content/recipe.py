@@ -1,5 +1,6 @@
 from django.db import models
 
+
 from Kouiz.models.recipes_content.tag import Tag
 
 
