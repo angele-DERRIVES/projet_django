@@ -60,6 +60,7 @@ urlpatterns = [
 
     path('quiz/<int:quiz_id>/<int:attempt_id>/results', AttemptDetail, name='attempt_detail'),
     path('quiz/<int:quiz_id>/new_question/', NewQuestion, name='new_question'),
+    # path('quiz/<int:quiz_id>/new_question/<int:key_id>/', NewQuestion, name='new_question_again'),
     path('quiz/new_quiz/', NewQuiz.as_view(), name='new_quiz'),
     path('quiz/<int:quiz_id>/', QuizDetail, name='quiz_detail'),
     path('quiz/<int:quiz_id>/take/submit', SubmitAttempt, name='submit_attempt'),

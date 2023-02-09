@@ -9,6 +9,7 @@ def QuizDetail(request, quiz_id):
     quiz = get_object_or_404(Quiz, id=quiz_id)
 
     context = {
-        'quiz': quiz
+        'quiz': quiz,
+        'quiz_id': quiz_id,
     }
     return render(request, 'Quiz/quizDetail.html', context)

@@ -7,5 +7,10 @@
 {% block body_content %}
     <h1>Quiz Detail</h1>
 
-    {{ quiz.description|safe }}
+    {{ quiz.title|safe }}<br>
+    {{ quiz.description|safe }}<br>
+
+    <a href="{% url 'new_question' quiz_id %}">Create New question</a>
+
+    
 {% endblock %}
