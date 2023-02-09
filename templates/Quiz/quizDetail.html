@@ -7,10 +7,20 @@
 {% block body_content %}
     <h1>Quiz Detail</h1>
 
-    {{ quiz.title|safe }}<br>
-    {{ quiz.description|safe }}<br>
+    <h2>{{ quiz.title|safe }}</h2>
+    <p>{{ quiz.description|safe }}</p>
 
     <a href="{% url 'new_question' quiz_id %}">Create New question</a>
 
-    
+    {% if questions %}
+        <ul class="list-group">
+            {% for question in questions %}
+                <li class="list-group-item">
+                    <a href="{% url 'quiz_detail' question.id %}">
+                        {{ question.question_text }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 {% endblock %}

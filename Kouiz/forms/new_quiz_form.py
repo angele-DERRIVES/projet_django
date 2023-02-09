@@ -6,7 +6,6 @@ from django.forms import ModelForm
 from Kouiz.models.quiz import Quiz
 
 
-#class NewQuizForm(models.Model):
 class NewQuizForm(ModelForm):
     title = forms.CharField(required=True)
     description = forms.CharField()
@@ -14,7 +13,4 @@ class NewQuizForm(ModelForm):
     class Meta:
         model = Quiz
         fields = ('title', 'description')
-        """widgets = {
-            'due': forms.DateTimeInput(format='%Y-%m-%d',
-                                       attrs={'type': 'datetime-local', 'class': 'timepicker'}),
-        }"""
+
