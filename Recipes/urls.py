@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.contrib.auth.views import LogoutView
 from django.urls import path
 
+from Kouiz.forms.new_answer_form import NewAnswerForm
 from Kouiz.views import attempt_detail_view
 from Kouiz.views.index_view import IndexView
 from Kouiz.views.new_quiz_view import NewQuiz
