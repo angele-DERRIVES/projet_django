@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% block title %}Quiz Detail{% endblock %}
+{% load static %}
+{%  load crispy_forms_tags %}
+
+{% block body_content %}
+    <h1>Your Quizzes</h1>
+
+    {% if quiz.user == request.user %}
+        <a href="{% url 'quiz_detail' quiz_id %}">{{ Quiz.title }}</a>
+    {% endif %}
+
+{% endblock %}
