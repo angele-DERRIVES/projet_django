@@ -7,9 +7,8 @@ class NewAnswerForm(forms.ModelForm):
     answer_text = forms.CharField(widget=forms.TextInput(attrs={'class': 'validate'}), required=True)
     is_correct = forms.BooleanField(required=True)
     quiz_id = forms.IntegerField(widget=forms.HiddenInput())
+    question_id = forms.IntegerField(widget=forms.HiddenInput())
 
     class Meta:
         model = Answer
-        fields = ('answer_text', 'is_correct', 'quiz_id')
-
-# SERT POSSIBLEMENT A RIEN
+        fields = ('answer_text', 'is_correct', 'quiz_id', 'question_id')

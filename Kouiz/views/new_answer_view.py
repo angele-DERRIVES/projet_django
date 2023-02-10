@@ -32,7 +32,7 @@ class NewAnswerView(FormView):
         quiz.questions.add(question)
         quiz.save()
 
-        return redirect('new_answer', quiz_id=quiz_id, question_id=question_id)
+        return redirect('my_answers', quiz_id=quiz_id, question_id=question_id)
 
     def form_invalid(self, form):
         return render(self.request, self.template_name, {'form': form})
