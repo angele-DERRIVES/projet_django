@@ -20,6 +20,7 @@ from django.urls import path
 from Kouiz.views.index_view import IndexView
 from Kouiz.views.new_answer_view import NewAnswerView
 from Kouiz.views.new_quiz_view import NewQuiz
+from Kouiz.views.question_detail_view import QuestionDetail
 from Kouiz.views.quiz_list_view import QuizListView
 from Kouiz.views.recipes_content.recipe_detail_view import RecipeDetailView
 from Kouiz.views.recipes_content.recipe_list_view import RecipeListView
@@ -69,5 +70,6 @@ urlpatterns = [
     path('quiz/<int:quiz_id>/take', TakeQuiz, name='take_quiz'),
     path('quiz/list/', QuizListView.as_view(), name='quiz_list'),
     path('quiz/my_quizzes/', MyQuizView.as_view(), name='my_quizzes'),
-    path('quiz/<int:quiz_id>/question/<int:question_id>/new_answer', NewAnswerView.as_view(), name='my_answers'),
+    path('quiz/<int:quiz_id>/question/<int:question_id>/new_answer', NewAnswerView.as_view(), name='new_answer'),
+    path('quiz/<int:quiz_id>/question/<int:question_id>', QuestionDetail, name='question_detail'),
 ]

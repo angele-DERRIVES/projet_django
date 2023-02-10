@@ -1,7 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render
 
-from Kouiz.models.player import Player
-from Kouiz.models.question import Question
 from Kouiz.models.quiz import Quiz
 
 

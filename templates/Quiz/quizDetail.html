@@ -11,7 +11,7 @@
     <p>{{ quiz.description|safe }}</p>
 
     {% if quiz.user == request.user %}
-        <a href="{% url 'new_question' quiz_id %}">Create New question</a>
+        <a href="{% url 'new_question' quiz_id %}">Create new question</a>
     {% endif %}
 
     {% if questions %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% block title %}Quiz Detail{% endblock %}
+{% load static %}
+{%  load crispy_forms_tags %}
+
+{% block body_content %}
+    <h1>Question Detail</h1>
+
+    <h2>{{ question.question_text|safe }}</h2>
+    <p>{{ quiz.points|safe }}</p>
+
+    {% if quiz.user == request.user %}
+        <a href="{% url 'new_answer' quiz_id question_id %}">Create new answer</a>
+    {% endif %}
+
+{% endblock %}

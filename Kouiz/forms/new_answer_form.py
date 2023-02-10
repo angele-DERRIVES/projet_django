@@ -5,7 +5,7 @@ from Kouiz.models.answer import Answer
 
 class NewAnswerForm(forms.ModelForm):
     answer_text = forms.CharField(widget=forms.TextInput(attrs={'class': 'validate'}), required=True)
-    is_correct = forms.BooleanField(required=True)
+    # is_correct = forms.BooleanField(required=True)
     quiz_id = forms.IntegerField(widget=forms.HiddenInput())
     question_id = forms.IntegerField(widget=forms.HiddenInput())
 
