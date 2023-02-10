@@ -14,4 +14,14 @@
         <a href="{% url 'new_answer' quiz_id question_id %}">Create new answer</a>
     {% endif %}
 
+    <ul>
+        {% for answer in answers %}
+            <li>
+                {{ answer.answer_text }}
+                {% if answer.is_correct %}
+                    (Correct)
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
