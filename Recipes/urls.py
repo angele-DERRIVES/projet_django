@@ -18,7 +18,7 @@ from django.contrib.auth.views import LogoutView
 from django.urls import path
 
 from Kouiz.views.index_view import IndexView
-from Kouiz.views.new_answer_view import NewAnswerView
+from Kouiz.views.new_answer_view import NewAnswer
 from Kouiz.views.new_quiz_view import NewQuiz
 from Kouiz.views.question_detail_view import QuestionDetail
 from Kouiz.views.quiz_list_view import QuizListView
@@ -72,5 +72,5 @@ urlpatterns = [
     path('quiz/<int:quiz_id>/new_question/', NewQuestion, name='new_question'),
     path('quiz/<int:quiz_id>/', QuizDetail, name='quiz_detail'),
     path('quiz/<int:quiz_id>/question/<int:question_id>', QuestionDetail, name='question_detail'),
-    path('quiz/<int:quiz_id>/question/<int:question_id>/new_answer', NewAnswerView.as_view(), name='new_answer'),
+    path('quiz/<int:quiz_id>/question/<int:question_id>/new_answer', NewAnswer, name='new_answer'),
 ]
