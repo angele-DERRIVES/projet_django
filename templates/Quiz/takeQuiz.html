@@ -11,24 +11,27 @@
 
     {{ quiz.description | safe }}
 
-    {% for question in quiz.questions.all %}
-        <br>
-        <p>{{ question.question_text }}</p>
-        <input type="hidden" name="question" value="{{ question.id }}">
-        {% for answer in question.answers.all %}
-            <label>
-                <input name="answers" type="checkbox" value="{{ answer.id }}"/>
-                <span>{{ answer.answer_text }}</span>
-            </label>
+    <ul class="list-group">
+        {% for question in quiz.questions.all %}
+            <br>
+            <li class="list-group-item">
+                {{ question.question_text }}
+            </li>
+
+            <input type="hidden" name="question" value="{{ question.id }}">
+            <li class="list-group-item">
+                {% for answer in question.answers.all %}
+                    <div class="form-check">
+                        <label>
+                            <input name="answers" type="checkbox" value="{{ answer.id }}"/>
+                        </label>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            {{ answer.answer_text }}
+                        </label>
+                    </div>
+                {% endfor %}
+            </li>
         {% endfor %}
-    {% endfor %}
+    </ul>
 
-
-    <!--
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-primary">Submit</button>
-
-    </form>-->
 {% endblock %}
