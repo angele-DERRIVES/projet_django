@@ -1,22 +1,18 @@
 {% extends 'base.html' %}
 {% load crispy_forms_filters %}
-{% block title %}Question detail{% endblock %}
+{% block title %}Quizzes{% endblock %}
 {% load static %}
 {%  load crispy_forms_tags %}
 
 {% block body_content %}
-    <h1>Question details</h1>
+    <h1>Quizzes</h1>
 
-    {% if answers %}
-        <ul class="list-group">
-            {% for object in object_list %}
-                <li class="list-group-item">
-                    <a href="{% url 'quiz_detail' object.id %}">
-                        {{ object }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+    <ul class="list-group">
+        {% for object in object_list %}
+            <li class="list-group-item">
+                <a href="{% url 'take_quiz' object.id %}">{{ object }}</a>
+            </li>
+        {% endfor %}
+    </ul>
 
 {% endblock %}
