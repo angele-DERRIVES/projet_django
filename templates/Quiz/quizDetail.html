@@ -10,10 +10,6 @@
     <h2>{{ quiz.title|safe }}</h2>
     <p>{{ quiz.description|safe }}</p>
 
-    {% if quiz.user == request.user %}
-        <a href="{% url 'new_question' quiz_id %}">Create new question</a>
-    {% endif %}
-
     {% if questions %}
         <ul class="list-group">
             {% for question in questions %}
@@ -25,4 +21,9 @@
             {% endfor %}
         </ul>
     {% endif %}
+    <br>
+    {% if quiz.user == request.user %}
+        <a href="{% url 'new_question' quiz_id %}">Create new question</a>
+    {% endif %}
+
 {% endblock %}
