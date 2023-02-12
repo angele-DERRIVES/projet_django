@@ -6,7 +6,6 @@ from Kouiz.models.quiz import Quiz
 
 class Player(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    #quiz = user = models.ForeignKey(Quiz, on_delete=models.CASCADE)
     quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
     score = models.PositiveIntegerField()
     completed = models.DateField(auto_now_add=True)
