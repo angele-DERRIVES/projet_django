@@ -1,14 +1,5 @@
 Pour ce projet, j'ai choisi de faire un site qui permet de créer des quizs. 
 
-Utilisateurs
-Admin :
-nom d’utilisateur : Admin
-mot de passe : @dm1N
-
-Autre : 
-nom d’utilisateur : Tintin
-mot de passe : Milou
-
 J’ai utilisé la librairie crispy. 
 
 Je n’ai pas réussi à résoudre tous les problèmes du projet : 
