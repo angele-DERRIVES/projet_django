@@ -64,7 +64,7 @@ urlpatterns = [
     path('quiz/list/', QuizListView.as_view(), name='quiz_list'),
 
     path('quiz/<int:quiz_id>/take', TakeQuiz, name='take_quiz'),
-    path('quiz/<int:quiz_id>/take/submit', SubmitAttempt, name='submit_attempt'),
+    path('quiz/<int:quiz_id>/take/results', SubmitAttempt, name='submit_attempt'),
     path('quiz/<int:quiz_id>/<int:attempt_id>/results', AttemptDetail, name='attempt_detail'),
 
     path('quiz/my_quizzes/', MyQuizView.as_view(), name='my_quizzes'),

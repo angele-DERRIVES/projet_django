@@ -7,8 +7,8 @@ def TakeQuiz(request, quiz_id):
     quiz = get_object_or_404(Quiz, id=quiz_id)
 
     if request.method == 'POST':
-        # Traiter les réponses soumises dans le formulaire
         score = 0
+
         for question in quiz.questions.all():
             answers = request.POST.getlist('answers')
             for answer in question.answers.all():
